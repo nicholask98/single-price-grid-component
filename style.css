@@ -145,11 +145,19 @@ ul {
     color: black;
   }
 
-  @media only screen and (min-width: 500px) {
+  @media only screen and (min-width: 600px) {
     .container {
       grid-template-areas: "joinBox joinBox"
                            "subBox whyBox";
-      max-width: 600px;
+      max-width: 675px;
       margin-top: 10vh;
+    }
+
+    .whyBox {
+      border-bottom-left-radius: 0px;
+    }
+
+    .subBox {
+      border-bottom-left-radius: inherit;
     }
   }
