@@ -1,0 +1,155 @@
+/*===========
+    General
+  ===========*/
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+* {
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 2em;
+    background-color: aliceblue;
+    color: white;
+    font-family: 'Karla', sans-serif;
+}
+
+.container {
+    margin: 1.5em auto;
+    border-radius: 5px;
+    display: grid;
+    box-shadow: 0 6px 10px -2px lightgrey;
+    grid-template-areas: "joinBox"
+                         "subBox"
+                         "whyBox";
+}
+
+.box {
+  padding: .5em 1.5em 1em 1.5em;
+}
+
+/*============
+    Sections
+  ============*/
+
+/*~~~~~~~~~~~
+    joinBox
+  ~~~~~~~~~~~*/
+
+.joinBox {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    background-color: white;
+    grid-area: joinBox;
+}
+
+.joinBox h2 {
+    color: hsl(179, 62%, 43%);
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.joinBox span {
+    color: hsl(71, 73%, 54%);
+    font-weight: 700;
+}
+
+.joinBox p {
+  color: hsl(218, 22%, 77%);
+  line-height: 1.75rem;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/*~~~~~~~~~~
+    subBox
+  ~~~~~~~~~~*/
+
+.subBox {
+    background-color: hsl(179, 62%, 43%);
+    grid-area: subBox;
+}
+
+.subBox h3 {
+  font-weight: 700;
+}
+
+.subBox__pricing {
+  margin-bottom: 2em;
+}
+
+.subBox p {
+  font-weight: 400;
+  color: hsl(179, 62%, 90%);
+}
+
+.subBox button {
+  background-color:hsl(71, 73%, 54%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px -1px hsl(179, 62%, 35%);
+  display: block;
+  width: 100%;
+  padding: 1em;
+  margin: .25em auto;
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.amount {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-right: .25em;
+}
+
+.perMonth {
+  color: hsl(179, 62%, 80%);
+}
+
+/*~~~~~~~~~~
+    whyBox
+  ~~~~~~~~~~*/
+
+.whyBox{
+    background-color: hsl(179, 62%, 46%);
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    grid-area: whyBox;
+}
+
+.whyBox h3 {
+  font-weight: 700;
+}
+
+ul {
+  list-style-type: none;
+  line-height: 1.5rem;
+  padding: 0;
+  color: hsl(179, 62%, 80%);
+}
+
+/*============
+   Attribution
+  ============*/
+
+  .attribution {
+    color: black;
+  }
+
+  @media only screen and (min-width: 500px) {
+    .container {
+      grid-template-areas: "joinBox joinBox"
+                           "subBox whyBox";
+      max-width: 600px;
+      margin-top: 10vh;
+    }
+  }
